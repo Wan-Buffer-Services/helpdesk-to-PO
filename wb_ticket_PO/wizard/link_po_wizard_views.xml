@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_wb_link_po_wizard_form" model="ir.ui.view">
+        <field name="name">wb.link.po.wizard.form</field>
+        <field name="model">wb.link.po.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Link Purchase Orders">
+                <group>
+                    <field name="ticket_id" invisible="1"/>
+                    <field name="purchase_order_ids" widget="many2many_tags" required="1"
+                           options="{'no_create': True, 'no_edit': True}"/>
+                </group>
+                <footer>
+                    <button name="action_link_po" string="Link POs" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
